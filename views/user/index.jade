@@ -1,0 +1,10 @@
+extends ../layout
+
+block content
+    h1.
+        User List
+    a(href='/users/new') Add a new one
+    ul
+        each user, i in users
+            li
+                a(href="mailto:#{user.email}")= user.username
